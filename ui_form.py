@@ -264,7 +264,7 @@ class Ui_main(object):
         self.pushButton_6.setText(QCoreApplication.translate("main", u"\u6253\u5f00Ai\u5927\u6a21\u578b\u5b98\u7f51", None))
         self.pushButton_11.setText(QCoreApplication.translate("main", u"\u6253\u5f00\u5b98\u7f51", None))
         self.pushButton_4.setText(QCoreApplication.translate("main", u"\u6253\u5f00\u6559\u7a0b", None))
-        self.pushButton_7.setText(QCoreApplication.translate("main", u"\u7eed\u8d39\u8f6f\u4ef6", None))
+        self.pushButton_7.setText(QCoreApplication.translate("main", u"\u8d2d\u4e70\u6b63\u5f0f\u7248", None))
         self.label_2.setText(QCoreApplication.translate("main", u"\u68c0\u6d4b\u5230\u65b0\u7248\u672c\u8bf7\u53bb\u5b98\u7f51\u4e0b\u8f7d\u6700\u65b0\u7248\u672c", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("main", u"\u4e3b\u9875", None))
         self.checkBox_2.setText(QCoreApplication.translate("main", u"\u60ac\u6d6e\u7a97\u8ddf\u968f", None))

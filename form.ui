@@ -188,7 +188,7 @@ QPushButton:pressed {
 }</string>
         </property>
         <property name="text">
-         <string>续费软件</string>
+         <string>购买正式版</string>
         </property>
        </widget>
       </item>
