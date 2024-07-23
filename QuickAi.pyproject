@@ -1,0 +1,11 @@
+{
+    "files": [
+        "main.py",
+        "form.ui",
+        "form_2.ui",
+        "action.py",
+        "form_3.ui",
+        "web.py",
+        "interact_signal.py"
+    ]
+}
