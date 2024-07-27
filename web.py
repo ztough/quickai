@@ -67,23 +67,23 @@ class web(QWidget):
             self.open_ai(self.settings.value("model",0))
         clipboard = QApplication.clipboard()
         if index==0:
-            script = '''
-            var element = document.querySelector('#prompt-textarea');
-                   element.focus()
-                   '''
-            self.ui.webEngineView.page().runJavaScript(script)
-            self.activateWindow()
-            QTimer.singleShot(100,lambda:clipboard.setText(text.replace("{text}",clipboard.text())))
-            QTimer.singleShot(200,lambda:self.simulate_ctrl_v())
-            QTimer.singleShot(500,lambda:self.simulate_enter())
-            # clipboard_text = clipboard.text().replace("\\", "\\\\").replace("\n", "\\n").replace("\r", "\\r").replace("'", "\\'").replace('"', '\\"')
-            # self.ui.webEngineView.page().runJavaScript('''var textarea = document.getElementById('prompt-textarea');textarea.value = '%s';
-            # var event = new Event('input', { bubbles: true });
-            # var changeEvent = new Event('change', { bubbles: true });
-            # textarea.dispatchEvent(event);
-            # textarea.dispatchEvent(changeEvent);
-            # '''%text.replace("{text}",clipboard_text))
-            # self.ui.webEngineView.page().runJavaScript(r"var button = document.querySelector('[data-testid=\"send-button\"]'); button.disabled = false; button.click();");
+            # script = '''
+            # var element = document.querySelector('#prompt-textarea');
+            #        element.focus()
+            #        '''
+            # self.ui.webEngineView.page().runJavaScript(script)
+            # self.activateWindow()
+            # QTimer.singleShot(100,lambda:clipboard.setText(text.replace("{text}",clipboard.text())))
+            # QTimer.singleShot(200,lambda:self.simulate_ctrl_v())
+            # QTimer.singleShot(500,lambda:self.simulate_enter())
+            clipboard_text = clipboard.text().replace("\\", "\\\\").replace("\n", "\\n").replace("\r", "\\r").replace("'", "\\'").replace('"', '\\"')
+            self.ui.webEngineView.page().runJavaScript('''var textarea = document.getElementById('prompt-textarea');textarea.value = '%s';
+            var event = new Event('input', { bubbles: true });
+            var changeEvent = new Event('change', { bubbles: true });
+            textarea.dispatchEvent(event);
+            textarea.dispatchEvent(changeEvent);
+            '''%text.replace("{text}",clipboard_text))
+            self.ui.webEngineView.page().runJavaScript(r"var button = document.querySelector('[data-testid=\"send-button\"]'); button.disabled = false; button.click();");
         if index==1:
             self.ui.webEngineView.page().runJavaScript('''
             var textarea = document.querySelector('textarea.textarea--g7EUvnQR');
